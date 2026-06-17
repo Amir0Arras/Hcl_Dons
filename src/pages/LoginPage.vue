@@ -56,9 +56,9 @@ async function handleLogin() {
               </p>
               <div class="text-xs text-muted-foreground bg-muted p-3 rounded-lg space-y-0.5">
                 <p class="font-semibold mb-1">Comptes de démo :</p>
-                <p>Admin : admin@dons.fr / Admin123</p>
-                <p>Logisticien : logisticien@dons.fr / Log123</p>
-                <p>Bénéficiaire : beneficiaire@dons.fr / Ben123</p>
+                <p>Admin : admin@chu-lyon.fr / Admin123</p>
+                <p>Logisticien : logisticien@chu-lyon.fr / Log123</p>
+                <p>Bénéficiaire : beneficiaire@chu-lyon.fr / Ben123</p>
               </div>
             </div>
           </form>
