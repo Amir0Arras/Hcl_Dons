@@ -1,5 +1,5 @@
 /**
- * API localStorage — zéro backend.
+ * API localStorage — 
  * Règles métier :
  * - Logisticien OBLIGATOIREMENT lié à un point_collecte_id (admin le crée avec)
  * - Logisticien traite UNIQUEMENT les dons/réservations de son point
@@ -17,15 +17,15 @@ const set = (k, v) => localStorage.setItem(k, JSON.stringify(v))
 function seed() {
   if (localStorage.getItem('__seed_v4')) return
   set('points_collecte', [
-    { id: 'pc1', nom: 'Point Central HCL Lyon', adresse: '3 Quai des Célestins', ville: 'Lyon', code_postal: '69002', telephone: '04 72 40 40 40' },
+    { id: 'pc1', nom: 'Point Central HCL Lyon', adresse: '162 av Lacassange', ville: 'Lyon', code_postal: '69002', telephone: '04 78 86 57 75' },
     { id: 'pc2', nom: 'Point Bron', adresse: '12 Rue de la Paix', ville: 'Bron', code_postal: '69500', telephone: '04 72 40 40 41' },
   ])
   set('users', [
-    { id: 'u1', email: 'admin@dons.fr', password: 'Admin123', nom: 'Durand', prenom: 'Marie', role: 'Admin', verified: true, point_collecte_id: null },
-    { id: 'u2', email: 'logisticien@dons.fr', password: 'Log123', nom: 'Martin', prenom: 'Pierre', role: 'Logisticien', verified: true, point_collecte_id: 'pc1' },
-    { id: 'u3', email: 'logisticien2@dons.fr', password: 'Log123', nom: 'Bernard', prenom: 'Alice', role: 'Logisticien', verified: true, point_collecte_id: 'pc2' },
-    { id: 'u4', email: 'beneficiaire@dons.fr', password: 'Ben123', nom: 'Leroy', prenom: 'Sophie', role: 'Bénéficiaire', verified: true, point_collecte_id: null },
-    { id: 'u5', email: 'donateur@dons.fr', password: 'Don123', nom: 'Petit', prenom: 'Jean', role: 'Donateur', verified: true, point_collecte_id: null },
+    { id: 'u1', email: 'admin@chu-lyon.fr', password: 'Admin123', nom: 'Durand', prenom: 'Marie', role: 'Admin', verified: true, point_collecte_id: null },
+    { id: 'u2', email: 'logisticien@chu-lyon.fr', password: 'Log123', nom: 'Martin', prenom: 'Pierre', role: 'Logisticien', verified: true, point_collecte_id: 'pc1' },
+    { id: 'u3', email: 'logisticien2@chu-lyon.fr', password: 'Log123', nom: 'Bernard', prenom: 'Alice', role: 'Logisticien', verified: true, point_collecte_id: 'pc2' },
+    { id: 'u4', email: 'beneficiaire@chu-lyon.fr', password: 'Ben123', nom: 'Leroy', prenom: 'Sophie', role: 'Bénéficiaire', verified: true, point_collecte_id: null },
+    { id: 'u5', email: 'donateur@chu-lyon.fr', password: 'Don123', nom: 'Petit', prenom: 'Jean', role: 'Donateur', verified: true, point_collecte_id: null },
   ])
   set('donations', [
     { id: 'd1', type_materiel: 'Fauteuil roulant', quantite_initiale: 3, estimation_prix: 450, sterile: false, statut: 'Validée', point_collecte: 'pc1', localisation_libre: 'Bâtiment B, salle 12', date_expiration: null, photo: null, created_by: 'u5', created: new Date().toISOString() },
